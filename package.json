@@ -2,7 +2,7 @@
   "name": "react-website",
   "version": "1.2",
   "private": true,
-  "homepage": "https://adrienesquerre.github.io/back2front",
+  "homepage": "https://Teodorooo.github.io/projects_website",
   "dependencies": {
     "@material-ui/core": "^4.12.2",
     "@material-ui/icons": "^4.11.2",
@@ -50,7 +50,7 @@
   },
   "description": "website",
   "main": "index.js",
-  "repository": "https://github.com/adrienesquerre/back2front",
-  "author": "Adrien Esquerre",
+  "repository": "https://github.com/Teodorooo/projects_website",
+  "author": "Teodoro Esquerre",
   "license": "MIT"
 }
