@@ -21,14 +21,14 @@ img {
     padding-bottom: 5px;
     text-align: center;
     font-size: 42px;
-    color: rgb(95, 255, 89)
+    color: rgb(250, 146, 255)
   }
 
   h2 {
     text-align: center;
     font-size: 32px;
     text-shadow: 0px 0px 5px rgb(0, 7, 53);
-    color: rgb(95, 255, 89);
+    color: rgb(250, 146, 255);
     font-family: 'Caveat', cursive;
     font-weight: lighter;
     /* background-color:#02133a86;
