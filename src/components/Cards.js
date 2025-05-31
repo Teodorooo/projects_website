@@ -16,7 +16,7 @@ function Cards() {
         <div className='cards'>
             <video src={backgroundvideo} loop autoPlay muted />
             <div className='hero'>
-            <h1>Projects Overview</h1>
+            <h1>Teo Overview</h1>
             <h2>"Any sufficiently advanced technology is indistinguishable from Magic"<br></br>Arthur C. Clarke</h2>
             </div>
             <div className="cards__container">
