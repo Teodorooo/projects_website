@@ -43,7 +43,7 @@ function Navbar() {
                   marginLeft: "3px",
                 }}
               >
-                Adrien Esquerre
+                Teodoro Esquerre
               </h3>
             </div>
             <Link to="/" onClick={closeMobileMenu}>
@@ -63,11 +63,11 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                to="/frontend"
+                to="/me"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                Front-end
+                Who am I ?
               </Link>
             </li>
             <li className="nav-item">

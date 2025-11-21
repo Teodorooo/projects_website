@@ -1,178 +1,196 @@
-video {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: -1;
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap');
+
+:root {
+  --green: rgb(95, 255, 89);
+  --green-soft: rgb(170, 254, 167);
+  --badge: #0133AA;
+  --panel: #02133a86;
 }
 
-img {
-  filter: grayscale(100%);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
- 
 
-.hero {
-
-  padding: 30px
-
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  color: white;
+  min-height: 100%;
 }
-  h1 {
-    padding-top: 55px;
-    padding-bottom: 5px;
-    text-align: center;
-    font-size: 42px;
-    color: rgb(250, 146, 255)
-  }
 
-  h2 {
-    text-align: center;
-    font-size: 32px;
-    text-shadow: 0px 0px 5px rgb(0, 7, 53);
-    color: rgb(250, 146, 255);
-    font-family: 'Caveat', cursive;
-    font-weight: lighter;
-    /* background-color:#02133a86;
-    width: 50%;
-    margin: auto;
-    border-radius: 15px; */
-  }
-  
+/* ---------- BACKGROUND VIDEO ---------- */
+video.bgvideo {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
 
-  
-  .cards__container {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    max-width: 1120px;
-    width: 90%;
-    margin: 0 auto;
-  }
-  
-  .cards__wrapper {
-    position: relative;
-    margin: 50px 0 45px;
-  }
-  
-  .cards__items {
-    margin-bottom: 24px;
-  }
-  
-  .cards__item {
-    display: flex;
-    flex: 1;
-    margin: 0 1rem;
-    border-radius: 10px;
-  }
-  
-  .cards__item__link {
-    display: flex;
-    flex-flow: column;
-    width: 100%;
-    border-radius: 10px;
-    overflow: hidden;
-    text-decoration: none;
-    background-color: #02133a86;
-  }
+/* ---------- HERO SECTION ---------- */
 
+h1 {
+  padding-top: 15px;
+  padding-bottom: 2px;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--green);
+}
 
-  h3 {
-    font-size:16px;
-    font-weight: lighter;
-    color: rgb(95, 255, 89)
-  }
+h2 {
+  text-align: center;
+  font-size: 1.25rem;
+  text-shadow: 0 0 5px rgb(0, 7, 53);
+  color: var(--green);
+  font-family: 'Caveat', cursive;
+  font-weight: 300;
+}
 
-  h4 {
-    font-size:23px;
-    color: rgb(95, 255, 89)
-  }
+/* ---------- CARD GRID (CardItem) ---------- */
+.cards__container {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
 
-  h5 {
-    font-size:18px;
-    font-weight: lighter;
-    color: rgb(95, 255, 89)
-  }
+.cards__wrapper {
+  margin: 50px 0 45px;
+}
 
-  .subtext {
-    margin-top: 7px
-  }
-  
-  .cards__item__pic-wrap {
-    position: relative;
-    width: 100%;
-    padding-top: 67%;
-    overflow: hidden;
-  }
-  
-  .fade-img {
-    animation-name: fade-img;
-    animation-duration: 2s;
-  }
-  
-  .cards__item__pic-wrap::after {
-    content: attr(data-category);
-    position: absolute;
-    bottom: 0;
-    margin-left: 10px;
-    padding: 6px 8px;
-    max-width: calc((100%) - 60px);
-    font-size: 15px;
-    font-weight: 700;
-    color: #ffffff;
-    background-color: #0133AA;
-    box-sizing: border-box;
-  }
+.cards__items {
+  display: flex;
+  flex-direction: row;
+}
 
+.cards__item {
+  display: flex;
+  flex: 1;
+  margin: 2%;
+}
 
-  .cards__item__img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    transition: all 0.2s linear;
-  }
-  
-  .cards__item__img:hover {
-    transform: scale(1.1);
-  }
-  
-  .cards__item__info {
-    padding: 20px 30px 30px;
-  }
-  
-  .cards__item__text {
-    color: rgb(95, 255, 89);
-    font-size: 20px;
-    line-height: 24px;
-  }
+.cards__item__link {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--panel);
+  text-decoration: none;
+}
 
-  .backup-link {
-    color: rgb(170, 254, 167);
-    text-decoration: underline;
-    font-weight: bold;
-  }
-  
-  
-  @media only screen and (min-width: 1200px) {
-    .content__blog__container {
-      width: 84%;
-    }
-  }
-  
-  @media only screen and (min-width: 1024px) {
-    .cards__items {
-      display: flex;
-    }
-  }
-  
-  @media only screen and (max-width: 1024px) {
-    .cards__item {
-      margin-bottom: 2rem;
-    }
-  }
+.cards__item__pic-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+}
+
+.cards__item__pic-wrap::after {
+  content: attr(data-category);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0 0 10px 10px;
+  padding: 6px 8px;
+  background-color: var(--badge);
+  font-weight: bold;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.cards__item__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.cards__item__img.hover {
+  opacity: 0;
+}
+
+/* ---------- SINGLE VIEW ---------- */
+.single-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.image-stack {
+  position: relative;
+  width: min(90vw, 520px);
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  margin: 0 auto 24px;
+}
+
+/* Both images stacked */
+.image-stack .cards__item__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 2.5s ease;
+  opacity: 1;
+}
+
+/* Bottom one fades out */
+.image-stack .behind {
+  z-index: 2;
+  opacity: 1;
+}
+
+.image-stack .behind.fade {
+  opacity: 0;
+}
+
+/* Top one stays visible */
+.image-stack .top {
+  z-index: 1;
+  opacity: 1;
+}
+
+/* ---------- TEXT ---------- */
+.text-block {
+  text-align: center;
+  color: var(--green);
+  z-index: 1;
+}
+
+.text-block h1 {
+  margin: 0 0 8px;
+}
+
+.text-block h2 {
+  margin: 0 0 16px;
+}
+
+footer {
+  position: relative;
+  z-index: 2;
+}
+
+.cards__item__text {
+  margin-top: 0.25rem;
+  margin-left: 0.5rem;
+  font-size: 1.5cap;
+}
+
+.cards__item__info {
+  margin-bottom: 0.5rem;
+}
