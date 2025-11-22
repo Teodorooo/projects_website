@@ -3,8 +3,8 @@ import Navbar from './components/Navbar';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Home from './components/pages/Home';
-import Frontend from './components/pages/Frontend';
-import Fullstack from './components/pages/Fullstack';
+import Me from './components/pages/Me';
+import Projects from './components/pages/Projects';
 import Calendar from './mini-apps/calendarApp/Calendar';
 import BBapiApp from './mini-apps/BBAPI/BbapiApp';
 import Automation from './components/pages/Automation';
@@ -19,8 +19,8 @@ function App() {
      <Navbar />
      <Switch>
       <Route path='/' exact component={Home} />
-      <Route path='/frontend' component={Frontend} />
-      <Route path='/fullstack' component={Fullstack} />
+      <Route path="/me" component={Me} />
+      <Route path='/projects' component={Projects} />
       <Route path='/automation' component={Automation} />
       <Route path='/videos' component={Videos} />
       <Route path='/calendar' component={Calendar} />

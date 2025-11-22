@@ -8,7 +8,7 @@ import me_bw from "../../images/Mr bean faces/me_bw.jpg";
 import me_coloured from "../../images/Mr bean faces/me_coloured.jpg";
 import { useState, useEffect } from "react";
 
-function me() {
+function Me() {
   window.scrollTo(0, 0);
   const [fade, setFade] = useState(false)
   useEffect(() => {setFade(true);}, []);
@@ -53,4 +53,4 @@ return (
     );
   }
 
-export default me
+export default Me

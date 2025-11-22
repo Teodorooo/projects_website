@@ -15,7 +15,7 @@ function CardItem(props) {
             className="cards__item__img bigger"
           />
               <Link
-                to="/Me"
+                to={props.link}
               >
                 <img                 
                 onMouseEnter={() => setHovered(true)}
@@ -25,12 +25,11 @@ function CardItem(props) {
                   ? "cards__item__img hover"
                   : "cards__item__img"
                   }
-                  src={props.src} alt="misteryman" />
+                  src={props.src} 
+                  alt="misteryman" />
               </Link>
 
-          <img
 
-          />
         </figure>
 
         <div className="cards__item__info">

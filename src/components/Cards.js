@@ -9,7 +9,7 @@ import backgroundvideo from "../videos/video-compressed.mp4";
 import { useState, useEffect } from "react";
 import "./Cards.css";
 
-function Cards(props) {
+function Cards() {
   const [selectedId, setSelectedId] = useState(null);
   const [fade, setFade] = useState(false);
 
@@ -23,6 +23,7 @@ function Cards(props) {
       label: "Who am I?",
       header: "Who am I?",
       subj: "Imma 16yo thirsty fo'some dough.",
+      link: "/me",
     },
     {
       id: 2,
@@ -33,6 +34,7 @@ function Cards(props) {
       label: "My projects",
       header: "My Projects",
       subj: "Here are my projects.",
+      link: "/projects",
     },
   ];
 
@@ -69,15 +71,6 @@ function Cards(props) {
           <div className="text-block">
             <h1>{card.header}</h1>
             <h2>{card.subj}</h2>
-            <button
-              className="backBtn"
-              onClick={() => {
-                setFade(false);
-                setSelectedId(null);
-              }}
-            >
-              ← Back
-            </button>
           </div>
         </div>
       </div>
