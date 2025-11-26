@@ -72,11 +72,11 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                to="/fullstack"
+                to="/projects"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                Fullstack
+                Projects
               </Link>
             </li>
             <li className="nav-item">

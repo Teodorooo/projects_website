@@ -18,8 +18,6 @@ function Me() {
         id: 1,
         revealed: me_bw,
         srcColoured: me_coloured,
-        text: "The rock and the roll!!",
-        label: "Who am I?",
         header: "Who am I?",
         subj: "Imma 16yo thirsty fo'some dough.",
       }
