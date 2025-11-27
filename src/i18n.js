@@ -6,9 +6,17 @@ i18n
   .use(HttpBackend)
   .use(initReactI18next)
   .init({
-    lng: "en",                      // default language
+    lng: "en",
     fallbackLng: "en",
-    interpolation: { escapeValue: false },
+    debug: true,   // <- helps see loading errors in console
+
+    backend: {
+      loadPath: "/locales/{{lng}}/translation.json"
+    },
+
+    interpolation: {
+      escapeValue: false
+    }
   });
 
 export default i18n;
