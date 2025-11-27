@@ -7,11 +7,13 @@ import sculpture_black from "../images/Mr bean faces/sculpture_black.jpg";
 import sculpture_gold from "../images/Mr bean faces/sculpture_gold.jpg";
 import backgroundvideo from "../videos/video-compressed.mp4";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import "./Cards.css";
 
 function Cards() {
   const [selectedId, setSelectedId] = useState(null);
   const [fade, setFade] = useState(false);
+  const { t } = useTranslation();
 
   const cards = [
     {
@@ -85,7 +87,7 @@ function Cards() {
       <div className="hero">
         <h1>Teo's Website</h1>
         <h2>
-          "Any sufficiently advanced technology is indistinguishable from Magic"
+          {t("quote")}
           <br />– Arthur C. Clarke
         </h2>
       </div>

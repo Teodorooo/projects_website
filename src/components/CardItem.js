@@ -28,8 +28,6 @@ function CardItem(props) {
                   src={props.src} 
                   alt="misteryman" />
               </Link>
-
-
         </figure>
 
         <div className="cards__item__info">

@@ -81,11 +81,11 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                to="/automation"
+                to="/lang"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                Automation
+                Languages
               </Link>
             </li>
             <li className="nav-item">

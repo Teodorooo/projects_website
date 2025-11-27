@@ -7,7 +7,7 @@ import Me from './components/pages/Me';
 import Projects from './components/pages/Projects';
 import Calendar from './mini-apps/calendarApp/Calendar';
 import BBapiApp from './mini-apps/BBAPI/BbapiApp';
-import Automation from './components/pages/Automation';
+import Lang from './components/pages/Lang';
 import Footer from './components/Footer';
 import Lightbox from './mini-apps/FluidLightbox/Lightbox';
 import Videos from './components/pages/Videos';
@@ -21,7 +21,7 @@ function App() {
       <Route path='/' exact component={Home} />
       <Route path="/me" component={Me} />
       <Route path='/projects' component={Projects} />
-      <Route path='/automation' component={Automation} />
+      <Route path='/lang' component={Lang} />
       <Route path='/videos' component={Videos} />
       <Route path='/calendar' component={Calendar} />
       <Route path='/bbapi' component={BBapiApp} />
