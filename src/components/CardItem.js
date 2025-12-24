@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import "./Cards.css";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function CardItem(props) {
   const [hovered, setHovered] = useState(false);
-
+  const { t } = useTranslation();
+  
   return (
     <li className="cards__item">
       <div className="cards__item__link" onClick={props.onSelect}>

@@ -45,8 +45,6 @@ function Cards() {
     if (selectedId) setFade(true);
   }, [selectedId]);
 
-  let card = null;
-
   if (selectedId) {
     const card = cards.find((c) => c.id === selectedId);
     return (

@@ -8,10 +8,10 @@ i18n
   .init({
     lng: "en",
     fallbackLng: "en",
-    debug: true,   // <- helps see loading errors in console
+    debug: true,
 
     backend: {
-      loadPath: "/locales/{{lng}}/translation.json"
+      loadPath: process.env.PUBLIC_URL + "/locales/{{lng}}/translation.json"
     },
 
     interpolation: {
@@ -20,3 +20,4 @@ i18n
   });
 
 export default i18n;
+
